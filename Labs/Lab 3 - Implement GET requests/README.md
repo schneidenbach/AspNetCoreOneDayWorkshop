@@ -67,7 +67,7 @@ Note that this class will not do anything right now - we're just adding it in to
 ### Create the request handler
 
 1. Add a class to the GetJobs folder called GetJobsRequestHandler.
-2. Implement the `IRequestHandler<GetJobsRequest, IEnumerable<GetJobsResponse>>` interface.
+2. Implement the `IRequestHandler<GetJobsRequest, Func<ControllerBase, IActionResult>>` interface.
 3. Use the tooling to auto-add the constructor, then add in `WorkshopDbContext` and `IMapper` as parameters to the constructor and set them to private fields or properties.
 4. Use the tooling to auto-add the `Handle` method that will be executed.
 5. Write your `Handle` method implementation like so:
